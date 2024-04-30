@@ -28,6 +28,16 @@
     </div>
 </section>
 
+<div>
+    <h2>Historial</h2>
+    <button (click)="limpiar()">Limpiar</button>
+    <ul>
+        @for(msg of messages; track msg) {
+            <li>{{msg}}</li>
+        }
+    </ul>
+</div>
+
 <footer>
     <p>© 2024 Fernando Sánchez</p>
 </footer>    
