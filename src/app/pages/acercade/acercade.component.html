@@ -1,8 +1,11 @@
 <p>acercade works!</p>
 
-<label>
-    
-</label>
+<label for="txtMsg">Mensaje nuevo:</label>
+<input id="txtMsg" name="txtMsg" [(ngModel)]="msg"/> <br>
+<br>
+<button (click)="agregar()">Agregar</button>
+<button (click)="limpiar()">Limpiar</button>
+
 <ul>
     @for(msg of messages; track msg) {
         <li>{{msg}}</li>
