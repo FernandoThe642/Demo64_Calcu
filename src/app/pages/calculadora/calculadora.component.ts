@@ -28,11 +28,12 @@ v_minus: string = '-'
 v_multiply: string = '*'
 v_divide: string = '/'
 v_clear: string = 'C'
-v_dot: string = '.';
+v_dot: string = '.'
 v_result: string = '='
 
 displayCal: string = ' '
-var: number =0;
+operation: string = ' '
+var: number =0
 
 //Constructor para agregar historial
 constructor(private calculadoraService: CalculadoraService ){}
@@ -49,8 +50,9 @@ add(value: string ){
   
   if(value=="="){
     try {
-        this.displayCal= eval(this.displayCal);
-        this.calculadoraService.add(this.displayCal)
+      this.operation= this.displayCal;  
+      this.displayCal= eval(this.displayCal);
+      this.calculadoraService.add(this.operation + '=' + this.displayCal);
     } catch (error) {
         this.displayCal = 'Error';
     }
