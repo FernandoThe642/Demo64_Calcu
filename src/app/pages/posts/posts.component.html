@@ -1,7 +1,9 @@
 <p>posts works!</p>
 
 <ul>
-    @for ( msg of post; track msg.id) {
-        <li>{{msg}}</li>
+    @for(msg of photo; track msg.id){
+        @if (msg.id < 6) {
+            <li><strong>{{msg.title}}</strong>: <img [src]="msg.thumbnailUrl"/></li>
+        }
     }
 </ul>

@@ -12,4 +12,8 @@ export class PostService {
   getAllPost() {
     return this.http.get('http:jsonplaceholder.typicode.com/posts')
   }
+
+  getAllPhoto() {
+    return this.http.get('https://jsonplaceholder.typicode.com/photos')
+  }
 }
