@@ -1,9 +1,34 @@
-<p>posts works!</p>
 
-<ul>
-    @for(msg of photo; track msg.id){
-        @if (msg.id < 6) {
-            <li><strong>{{msg.title}}</strong>: <img [src]="msg.thumbnailUrl"/></li>
+
+<section id="Post" class="Posts">
+    <h2>Post</h2>
+
+    <ul>
+        @for(msg of post; track msg.id){
+            @if (msg.id < 7) {
+            <li> <strong (click)="setId(msg.id)">{{msg.title}}</strong> </li> 
+            }
         }
-    }
-</ul>
+    </ul>
+</section>
+
+<section  class="Detail">
+    <h2>Detalle</h2>
+
+        @for(pos of post; track pos.id){
+            @if (pos.id == idPost){
+                <p> <strong>ID: </strong> {{pos.id}}</p>
+                <p> <strong>Titulo: </strong> {{pos.title}}</p>
+                <p> <strong>Body: </strong> {{pos.body}}</p>
+            }
+        }
+
+        <ul>
+            @for(comm of comment; track comm.id){
+                @if (comm.postId == idPost ) {
+                    <li> <p><strong>{{comm.email}}: </strong>{{comm.body}}</p> </li>
+                }
+            }
+        </ul>    
+
+</section>

@@ -47,6 +47,7 @@ limpiar(){
   this.calculadoraService.clear()
   this.ngOnInit()
 }
+
 add(value: string ){
   
   if(value=="="){

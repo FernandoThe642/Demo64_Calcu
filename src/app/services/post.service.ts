@@ -10,10 +10,18 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   getAllPost() {
-    return this.http.get('http:jsonplaceholder.typicode.com/posts')
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
 
-  getAllPhoto() {
+ getAllPhoto() {
     return this.http.get('https://jsonplaceholder.typicode.com/photos')
   }
+
+
+  getAllCommets() {
+    return this.http.get('https://jsonplaceholder.typicode.com/comments')
+  }
+
+
+
 }

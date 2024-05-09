@@ -1,0 +1,35 @@
+%common-styles {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+%common-list-styles {
+    list-style-type: none;
+    padding: 0;
+}
+button.link { background:none; border:none; }
+
+.Posts, .Detail {
+    @extend %common-styles;
+
+    h2 {
+        color: #343a40;
+        font-size: 24px;
+    }
+
+    margin-bottom: 20px;
+
+    nav ul {
+        @extend %common-list-styles;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                color: #343a40;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
