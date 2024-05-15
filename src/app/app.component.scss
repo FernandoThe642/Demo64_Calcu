@@ -1,0 +1,60 @@
+header {
+    text-align: center;
+    margin: 0; /* Elimina los márgenes alrededor del header */
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed; /* Hace que la posición del header sea fija */
+    top: 0; /* Asegura que el header se pegue a la parte superior de la pantalla */
+    width: 100%; /* Hace que el header tenga el ancho completo de su contenedor */
+    box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho y alto del elemento */
+    left: 0; /* Asegura que el header se pegue a la izquierda de la pantalla */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 100px; /* Ajusta este valor según la altura de tu header */
+    padding-bottom: 100px; /* Ajusta este valor según la altura de tu footer */
+  }
+  
+  
+  nav {
+    margin: 10px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    margin: 0; /* Remove margin to ensure buttons are together */
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px 0 0 5px; /* Make left corners rounded */
+    transition: background-color 0.3s;
+    margin-right: -4px; /* Overlap borders to keep them together */
+  }
+  nav ul li a:last-child {
+    border-radius: 0 5px 5px 0; /* Make right corners rounded */
+  }
+  nav ul li a:hover {
+    background-color: #333;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho y alto del elemento */
+    left: 0; /* Asegura que el footer se pegue a la izquierda de la pantalla */
+  }
+  

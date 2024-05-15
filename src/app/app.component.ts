@@ -11,5 +11,5 @@ import { HeaderComponent } from './components/header/header.component';
 })
 export class AppComponent {
   title = 'Demostracion UPS';
-  user = 'ctimbi@ups.edu.ec'
+  user = 'Usuario'
 }

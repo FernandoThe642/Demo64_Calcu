@@ -1,0 +1,21 @@
+<p>mensajes works!</p>
+
+<label id="txtTitle">Titulo</label>
+<input type="text" id="txtTitle" name="txtTitle" 
+    [(ngModel)]="message.title"/>
+<br/>
+
+<label for="txtMsg">Mensaje</label>
+<textarea cols="50" rows="7" id="txtMsg" name="txtMsg" 
+    [(ngModel)]="message.msg"></textarea>
+<br/>
+
+<button (click)="guardar()">Guardar</button>
+
+<ul>
+    @for(msg of messages; track msg.id){
+        
+            <li><strong>{{msg.title}}</strong>: <span>{{msg.msg}}</span></li>
+        
+    }
+</ul>

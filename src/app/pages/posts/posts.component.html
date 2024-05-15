@@ -1,12 +1,12 @@
 
 
-<section id="Post" class="Posts">
+<section class="Posts">
     <h2>Post</h2>
 
     <ul>
         @for(msg of post; track msg.id){
             @if (msg.id < 7) {
-            <li> <strong (click)="setId(msg.id)">{{msg.title}}</strong> </li> 
+            <li> <strong (click)="setId(msg.id, msg.title, msg.body)">{{msg.title}}</strong> </li> 
             }
         }
     </ul>
@@ -29,6 +29,19 @@
                     <li> <p><strong>{{comm.email}}: </strong>{{comm.body}}</p> </li>
                 }
             }
-        </ul>    
+        </ul>   
 
+</section>
+
+<section class="Posts_F">
+    <h2>Post Firebase</h2>
+    <ul>
+        @for(post of posts; track post.id){
+            
+            <p> <strong>ID: </strong> {{post.id}}</p>
+            <p> <strong>Titulo: </strong> {{post.title}}</p>
+            <p> <strong>Body: </strong> {{post.body}}</p>
+            
+        }
+    </ul>
 </section>
